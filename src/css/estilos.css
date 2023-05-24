@@ -4,13 +4,13 @@
      max-width: 1280px;
      margin: 0 auto;
      /*0 pra cima e pra baixo, auto para os lados = cima, direita, baixo, esquerda*/
-     background-color: rgb(212, 212, 212);
-     color: #272727;
+     background: rgb(172, 172, 172);
+     background: linear-gradient(90deg, rgba(172, 172, 172, 1) 0%, rgba(255, 255, 255, 1) 75%, rgba(219, 219, 219, 1) 100%);
  }
 
  body.modo-escuro {
      background-color: #212121;
-     color: #f5f5f5;
+     color: #000000;
      transition: 0, 2s ease-in-out;
  }
 
@@ -68,8 +68,8 @@
      background-color: #e6e6e6;
  }
 
- main .modo-escuro .cartao-vaso {
-     background-color: rgb(133, 133, 133);
+.modo-escuro .cartao-vaso {
+     background-color: rgb(149, 149, 149);
  }
 
  main .cartao-vaso .nome-vaso {
