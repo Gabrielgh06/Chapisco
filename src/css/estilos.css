@@ -5,11 +5,11 @@
      margin: 0 auto;
      /*0 pra cima e pra baixo, auto para os lados = cima, direita, baixo, esquerda*/
      background: rgb(172, 172, 172);
-     background: linear-gradient(90deg, rgba(172, 172, 172, 1) 0%, rgba(255, 255, 255, 1) 75%, rgba(219, 219, 219, 1) 100%);
+     background: linear-gradient(90deg, rgb(134, 134, 134) 0%, rgb(244, 244, 244) 75%, rgb(203, 203, 203) 100%);
  }
 
  body.modo-escuro {
-     background-color: #212121;
+     background: linear-gradient(to right, #333333 0%, #7f7f7f 75%, #7f7f7f 75%, #4c4c4c 100%);
      color: #000000;
      transition: 0, 2s ease-in-out;
  }
@@ -18,6 +18,14 @@
      display: flex;
      justify-content: space-between;
      padding: 25px;
+ }
+
+ p {
+     color: white;
+ }
+
+ p .modo-escuro {
+     color: white;
  }
 
  header .logo,
@@ -68,7 +76,7 @@
      background-color: #e6e6e6;
  }
 
-.modo-escuro .cartao-vaso {
+ .modo-escuro .cartao-vaso {
      background-color: rgb(149, 149, 149);
  }
 
@@ -110,4 +118,67 @@
      overflow-y: scroll;
      font-size: 14px;
      padding-right: 10px;
+ }
+
+ /*    -   -   -   -   -   -   -   -   -   -   */
+
+ .flex {
+     /*Flexbox for containers*/
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+ }
+
+ .waves {
+     position: relative;
+     width: 100%;
+     height: 15vh;
+     margin-bottom: -7px;
+     /*Fix for safari gap*/
+     min-height: 100px;
+     max-height: 150px;
+ }
+
+ .content {
+     position: relative;
+     height: 20vh;
+     text-align: center;
+     background-color: white;
+ }
+
+ /* Animation */
+
+ .parallax>use {
+     animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+ }
+
+ .parallax>use:nth-child(1) {
+     animation-delay: -2s;
+     animation-duration: 7s;
+ }
+
+ .parallax>use:nth-child(2) {
+     animation-delay: -3s;
+     animation-duration: 10s;
+ }
+
+ .parallax>use:nth-child(3) {
+     animation-delay: -4s;
+     animation-duration: 13s;
+ }
+
+ .parallax>use:nth-child(4) {
+     animation-delay: -5s;
+     animation-duration: 20s;
+ }
+
+ @keyframes move-forever {
+     0% {
+         transform: translate3d(-90px, 0, 0);
+     }
+
+     100% {
+         transform: translate3d(85px, 0, 0);
+     }
  }
